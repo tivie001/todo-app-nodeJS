@@ -15,7 +15,7 @@ The two models used are:
 Both models are relational by category so, the todos and categories can be
 correlated and be easily filtered by a category.
 
-You can run this app locally by running the following command: ##### node server.js
+You can run this app locally by running the following command:  **node server.js**
 
 ## GET
 ##### URL: https://todo-app-dgm3760.herokuapp.com/api
