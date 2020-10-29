@@ -110,7 +110,7 @@ function deleteTodo(id) {
 
 // ******* (UPDATE) FILTER TODOS *******
 function filterByCategory(name) {
-    fetch(`${url}api/todosByCat/${name}`)
+    fetch(`${url}/api/todosByCat/${name}`)
         .then(function(response) {
             return response.json();
         }).then(function(parsedJson) {
