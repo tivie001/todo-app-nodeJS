@@ -1,22 +1,41 @@
-# Todo App Assignment
+# Todo App Assignment (w/ MongoDB & ExpressJS)
+##### MAIN URL: https://todo-app-dgm3760.herokuapp.com/
+*This server will return todos & categories.*
+--------------------------------------------------------------
+This app implements a frontend with HTML, CSS, and JS. From the main.js
+file the user may interact with the app which then send requests to
+and from the server built with ExpressJS in Node. The following endpoints
+use mongoose model schema methods to create, update, delete, and get todos.
+The two models used are: 
+1. Todo Model 
+2. Category Model
+Both models are relational by category so, the todos and categories can be
+correlated and be easily filtered by category.
 
-For this assignment you will be writing a Todo App. However, due to the prevalence of basic Todo App tutorials on the internet, this assignment is going to go farther than a basic todo app.
+You can run this app locally by running the following command: *node server.js*
 
-**The app must be in vanilla Javascript. No frameworks or libraries. (ie. React, Vue, Jquery)**
+## GET
+##### URL: https://todo-app-dgm3760.herokuapp.com/api
+*Hitting this endpoint will get all todos in the app.*
 
-I have bootstrapped the basic structure of a starting app for you in `./src`.
+##### URL: https://todo-app-dgm3760.herokuapp.com/api
+*Hitting this endpoint will get all categories in the app.*
 
-- Your Todo App must fulfill the following user stories:
-- As a user, I would like to view todos from the data base (provided data object)
-- As a user, I need to view todos by category
-- As a user, I need to add todos
-- As a user, I need to complete todos (cross off)
-- As a user, I need to show/hide done todos (toggle done todos)
-- As a user, I need to delete completed todos
-- As a user, I need to add categories
-- As a user, I need to reload the page and have the todos persist (local storage)
-- As a user, I would like the app be well designed
+##### URL: https://todo-app-dgm3760.herokuapp.com/api/todosByCat/:name
+*Hitting this endpoint will get all categories in the app.*
 
-In the `./src/main.js` file you are given an initial data array to mock data from a database. Use this data for your initial app state.
+##### URL: https://todo-app-dgm3760.herokuapp.com/api/showHide
+*Hitting this endpoint will show/hide completed all todos based off of value within the database.*
 
-Lastly, you will need to host this project on the internet using a tool like Netlify.
+## POST
+##### URL: https://todo-app-dgm3760.herokuapp.com/api/addTodo
+*Hitting this endpoint will add a new todo app to the database with the given input.*
+
+## DELETE
+##### URL: https://todo-app-dgm3760.herokuapp.com/api/:id
+*Hitting this endpoint and will delete a particular todo by ID from the database and update app.*
+
+## PUT (UPDATE)
+##### URL: https://todo-app-dgm3760.herokuapp.com/api/:id
+*Hitting this endpoint will change a todo from completed and vice versa. And updates app in the database. 
+

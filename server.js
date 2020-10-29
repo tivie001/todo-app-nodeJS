@@ -89,7 +89,6 @@ app.put('/api/:id', (req, res) => {
 })
 //
 app.delete('/api/:id', (req, res) => {
-
     Todo.remove({
         _id: req.params.id
     }, (err) => {
