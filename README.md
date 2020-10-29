@@ -6,13 +6,16 @@ This app implements a frontend with HTML, CSS, and JS. From the main.js
 file the user may interact with the app which then send requests to
 and from the server built with ExpressJS in Node. The following endpoints
 use mongoose model schema methods to create, update, delete, and get todos.
+
 The two models used are: 
+
 1. Todo Model 
 2. Category Model
-Both models are relational by category so, the todos and categories can be
-correlated and be easily filtered by category.
 
-You can run this app locally by running the following command: *node server.js*
+Both models are relational by category so, the todos and categories can be
+correlated and be easily filtered by a category.
+
+You can run this app locally by running the following command: ##### node server.js
 
 ## GET
 ##### URL: https://todo-app-dgm3760.herokuapp.com/api
@@ -37,5 +40,5 @@ You can run this app locally by running the following command: *node server.js*
 
 ## PUT (UPDATE)
 ##### URL: https://todo-app-dgm3760.herokuapp.com/api/:id
-*Hitting this endpoint will change a todo from completed and vice versa. And updates app in the database. 
+*Hitting this endpoint will change a todo from completed and vice versa. And updates app in the database.* 
 
