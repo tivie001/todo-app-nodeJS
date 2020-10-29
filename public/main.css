@@ -1,0 +1,198 @@
+/**** CONTAINERS ****/
+
+.todo-app-container {
+    max-width: 45rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: Raleway;
+    border: 1px solid #eee;
+    border-radius: 0 0 10px 10px;
+    background: white;
+}
+.categories-container {
+    border-right: 1px solid #eee;
+}
+.categories-container  h3 {
+    color: #FF3366;
+    border-bottom: 1px solid #eee;
+    padding: 0 1rem;
+}
+.todos-container {
+    width: 100%;
+}
+.create-todo-container {
+    border-right: 1px solid #eee;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*************/
+
+/**** HEADER ****/
+.header {
+    padding: 1rem;
+    color: white;
+    background: #2EC4B6;
+    display: flex;
+    justify-content: space-between;
+}
+.header h1, p {
+    margin: 0;
+    padding-bottom: .5rem;
+}
+
+
+/**** BODY ****/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F6F7F8;
+}
+.todo-body {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-direction: row;
+    border-top: 1px solid #eee;
+}
+.subheadings {
+    color: #2EC4B6;
+    padding: 0 1rem;
+}
+.category-heading:hover {
+    opacity: .5;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.active {
+    background-color: #eee;
+}
+.task-input {
+    width: 100%;
+    border: none;
+    padding-left: 1rem;
+    font-size: 16px;
+}
+.todos-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+.strike-through {
+    text-decoration: line-through;
+}
+.trash-icon {
+    height: 20px;
+    text-align: right;
+    padding: 10px 1rem 0 0;
+}
+.trash-icon:hover {
+    opacity: .5;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/**** BUTTONS ****/
+
+.add-btn {
+    padding: 12px;
+    background: #FF3366;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    width:  20%;
+}
+.show-hide-btn {
+    margin: 15px;
+    background: #FF3366;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+/**** CHECKBOX STYLES ****/
+/* The container */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin: 12px 0;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    margin-left: 1rem;
+    height: 35px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #FF3366;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

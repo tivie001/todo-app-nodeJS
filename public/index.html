@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Todos</title>
+</head>
+<body>
+    <div class="todo-app-container">
+        <div class="header">
+            <div>
+                <h1>Todo App</h1>
+                <p>Tyler Ivie | DGM 3760</p>
+            </div>
+<!--            <button class="show-hide-btn" onclick="clearStorage()">Reset</button>-->
+        </div>
+        <div class="create-todo-container">
+            <form class="input-container" id="todoForm">
+                <input id="category" type="text" placeholder="Category" class="task-input" name="category">
+                <input id="todoName" type="text" placeholder="Task Name" class="task-input" name="taskName">
+                <button class="add-btn">+</button>
+            </form>
+        </div>
+        <div class="todo-body">
+            <div class="categories-container">
+                <h2 class="subheadings">Categories</h2>
+                <div id="categoryList"></div>
+                <button id="showHideBtn" class="show-hide-btn">Hide Completed</button>
+            </div>
+            <div class="todos-container">
+                <div id="todosList"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
