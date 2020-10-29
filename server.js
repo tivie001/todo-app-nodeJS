@@ -13,8 +13,8 @@ app.use(express.static('public'));
 mongoose.connect(process.env.MONGODB_URI,
     {useNewUrlParser: true, useUnifiedTopology: true});
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Server running on port 3000");
+app.listen(process.env.PORT || 3003, () => {
+    console.log("Server running on port 3003");
 })
 
 

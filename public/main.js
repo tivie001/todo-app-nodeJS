@@ -3,7 +3,7 @@ let initialCats = [];
 
 const form = document.querySelector('#todoForm');
 const showHide = document.querySelector('#showHideBtn');
-const url = 'https://todo-app-dgm3760.herokuapp.com/'
+const url = 'https://todo-app-dgm3760.herokuapp.com'
 
 // ******* ASYNC ONLOAD FUNCTIONS *******
 async function fetchTodos() {
