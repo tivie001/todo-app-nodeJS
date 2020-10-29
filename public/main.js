@@ -3,16 +3,17 @@ let initialCats = [];
 
 const form = document.querySelector('#todoForm');
 const showHide = document.querySelector('#showHideBtn');
+const url = 'https://todo-app-dgm3760.herokuapp.com/'
 
 // ******* ASYNC ONLOAD FUNCTIONS *******
 async function fetchTodos() {
-    const response = await fetch('http://localhost:3000/api');
+    const response = await fetch(`${url}/api`);
     const todos = await response.json();
     return todos;
 }
 
 async function fetchCategories() {
-    const response = await fetch('http://localhost:3000/api/categories');
+    const response = await fetch(`${url}/api/categories`);
     const categories = await response.json();
     return categories;
 }
@@ -35,7 +36,7 @@ form.addEventListener('submit', (e) => {
     const bodyData = { cat, todoName };
     if (cat && todoName) {
         async function addTodo() {
-            const response = await fetch('http://localhost:3000/api/addTodo', {
+            const response = await fetch(`${url}/api/addTodo`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -86,7 +87,7 @@ function getTodos(arr){
 // ******* (PUT) COMPLETE TODO *******
 function completeTodoItem(id, event) {
     event.preventDefault();
-    fetch(`http://localhost:3000/api/${id}`, {method: 'PUT'})
+    fetch(`${url}/api/${id}`, {method: 'PUT'})
         .then(function(response) {
         return response.json();
     }).then(function(parsedJson) {
@@ -99,7 +100,7 @@ function completeTodoItem(id, event) {
 
 // ******* (DELETE) TODOS *******
 function deleteTodo(id) {
-    fetch(`http://localhost:3000/api/${id}`, {method: 'DELETE'})
+    fetch(`${url}/api/${id}`, {method: 'DELETE'})
         .then(function(response) {
             return response.json();
         }).then(function(parsedJson) {
@@ -109,7 +110,7 @@ function deleteTodo(id) {
 
 // ******* (UPDATE) FILTER TODOS *******
 function filterByCategory(name) {
-    fetch(`http://localhost:3000/api/todosByCat/${name}`)
+    fetch(`${url}api/todosByCat/${name}`)
         .then(function(response) {
             return response.json();
         }).then(function(parsedJson) {
@@ -131,7 +132,7 @@ function filterByCategory(name) {
 showHide.addEventListener('click', () => {
     let buttonText = document.getElementById("showHideBtn").innerHTML;
     if (buttonText === 'Hide Completed') {
-        fetch(`http://localhost:3000/api/showHide`)
+        fetch(`${url}/api/showHide`)
             .then(function(response) {
                 return response.json();
             }).then(function(parsedJson) {
