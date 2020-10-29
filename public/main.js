@@ -124,7 +124,7 @@ function filterByCategory(name) {
         element.classList.add("active");
         const filteredArray = parsedJson.filter(todos => todos.cat.toLowerCase() === name);
         document.getElementById("todosList").innerHTML = name === 'All' ? getTodos(parsedJson) : getTodos(filteredArray);
-        document.getElementById("showHide").innerHTML = "Show Completed";
+        document.getElementById("showHideBtn").innerHTML = "Show Completed";
     })
 }
 
