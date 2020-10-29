@@ -3,7 +3,7 @@ const bodyParser= require('body-parser');
 const mongoose = require('mongoose');
 const Todo = require('./models/todoModel');
 const Categories = require('./models/categoryModel');
-require('dotenv').config();
+// require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
